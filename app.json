@@ -1,10 +1,6 @@
 {
   "expo": {
-    "name": "config-storybook-example",
-    "slug": "config-storybook-example",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "name": "StoryBook Testing",
+    "slug": "config-storyBook"
   }
 }

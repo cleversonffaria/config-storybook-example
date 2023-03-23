@@ -1,39 +1,29 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Button } from "./components/Button/button";
-import { Input } from "./components/Input/input.component";
+import { Home } from "./src/screens/Home/home.components";
+import { Login } from "./src/screens/Login/home.components";
+
+import { RootStackParamList } from "./src/interfaces/navigation";
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Config StoryBook</Text>
-
-      <Button onPress={() => {}} text="Clique aqui" />
-
-      <Input />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 let AppEntryPoint = App;
 
-if (false) AppEntryPoint = require("./.ondevice").default;
+const isEnableStorybook = true;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    marginBottom: 20,
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-});
+if (isEnableStorybook) AppEntryPoint = require("./.ondevice").default;
 
 export default AppEntryPoint;
