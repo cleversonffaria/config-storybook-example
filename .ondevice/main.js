@@ -5,5 +5,6 @@ module.exports = {
     "@storybook/addon-ondevice-actions",
     "@storybook/addon-ondevice-backgrounds",
     "@storybook/addon-ondevice-notes",
+    "@storybook/addon-ondevice-knobs",
   ],
 };

@@ -1,6 +1,14 @@
-import { getStorybookUI } from "@storybook/react-native";
+import { configure, getStorybookUI } from "@storybook/react-native";
 import "./doctools";
 import "./storybook.requires";
+
+// enables knobs for all stories
+// addDecorator(withKnobs);
+
+// import stories
+// configure(() => {
+//   require("../src/components/Button/button.stories.tsx");
+// }, module);
 
 const StorybookUIRoot = getStorybookUI({
   // initialSelection: { kind: 'TextInput', name: 'Basic' },

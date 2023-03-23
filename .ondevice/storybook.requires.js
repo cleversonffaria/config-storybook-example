@@ -22,6 +22,7 @@ import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
 import "@storybook/addon-ondevice-backgrounds/register";
 import "@storybook/addon-ondevice-notes/register";
+import "@storybook/addon-ondevice-knobs/register";
 
 import { argsEnhancers } from "@storybook/addon-actions/dist/modern/preset/addArgs";
 
@@ -50,6 +51,7 @@ try {
 const getStories = () => {
   return {
     "./src/components/Button/button.stories.tsx": require("../src/components/Button/button.stories.tsx"),
+    "./src/components/Input/input.stories.tsx": require("../src/components/Input/input.stories.tsx"),
   };
 };
 
